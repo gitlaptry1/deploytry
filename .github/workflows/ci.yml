@@ -1,4 +1,4 @@
-name: Docker Image CI
+name: fist
 
 on:
   push:
@@ -14,7 +14,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: Build & push image
+    - name: Build & PushImage
       run: |
         echo "${{secrets.DOCKERPW}}" | docker login -u "gitlaptry1" --password-stdin
         docker image build -t gitlaptry1/douckertry:fist
